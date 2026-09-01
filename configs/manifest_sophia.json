@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.2.0",
+  "phi": 0.618,
+  "phi_inv": 1.618033988749895,
+  "phi_cubed": 0.236328088,
+  "coherence_floor": 0.70,
+  "stable_prime_counts": [3, 5, 7, 11],
+  "field_memory": {
+    "logical_units": 16384,
+    "spectral_bins": 64,
+    "temporal_frames": 32,
+    "gaussian_sigma": 4.0
+  },
+  "holographic": {
+    "gaussian_sigma": 4.0,
+    "attenuation_mode": "exponential",
+    "compression_dtype": "uint16",
+    "bytes_per_unit": 2
+  },
+  "critical_band": {
+    "lambda_min": 0.5,
+    "lambda_max": 2.0
+  },
+  "sophia_oscillator": {
+    "omega_0": 1.618033988749895,
+    "damping_inv_phi": 1.618033988749895,
+    "paradox_amplitude": 1.0,
+    "initial_O": 0.0,
+    "initial_dO_dt": 0.0,
+    "dt": 0.01,
+    "paradox_floor": 0.05
+  },
+  "alignment": {
+    "default_phi": 0.618,
+    "evaluation_mode": "numeric",
+    "syzygy_threshold": 325.0,
+    "fire_as_ros_actions": true
+  },
+  "risk_management": {
+    "paradox_cascade_isolation": true,
+    "entropic_runaway_kill_threshold_cpu_pct": 90,
+    "consciousness_recursion_max_depth": 8
+  }
+}

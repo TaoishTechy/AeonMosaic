@@ -1,0 +1,23 @@
+{
+  "schema_version": "0.2.0",
+  "spectral_projector": {
+    "lambda_min": 0.5,
+    "lambda_max": 2.0,
+    "soft_margin": 0.05,
+    "projection_method": "soft_clip"
+  },
+  "hysteresis": {
+    "theta_lower": 0.45,
+    "theta_upper": 2.05,
+    "band_check_enabled": true
+  },
+  "refractory": {
+    "period_steps": 5,
+    "force_lock_after_n_out_of_band": 3
+  },
+  "triple_signature": {
+    "spectral_radius_margin": 0.05,
+    "eigenvalue_spread_phi_cubed": true,
+    "criticality_margin_floor": 0.05
+  }
+}

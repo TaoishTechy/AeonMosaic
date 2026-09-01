@@ -1,0 +1,16 @@
+{
+  "schema_version": "0.2.0",
+  "continuity_equation": {
+    "divergence_tolerance": 1e-3,
+    "history_buffer_size": 1000,
+    "trim_to_size": 500,
+    "flux_window_steps": 50
+  },
+  "erd_flux_history_max": 1000,
+  "violation_threshold": 10,
+  "conservation_bounds": {
+    "min_divergence": -1e-2,
+    "max_divergence": 1e-2
+  },
+  "violation_action": "log_warn"
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "0.2.0",
+  "project": {
+    "name": "AeonMosaic",
+    "codename": "pleromic_modular_robot",
+    "version": "0.2.0",
+    "author": "Micheal Landry (@MyKey00110000)",
+    "license": "MIT"
+  },
+  "runtime": {
+    "seed": 42,
+    "log_level": "INFO",
+    "heartbeat_period_s": 1.0,
+    "cull_timeout_s": 5.0,
+    "ota_sync_interval_s": 30.0,
+    "default_node_compute": "rpi_zero_2w",
+    "head_compute": "rpi_4_4gb",
+    "torso_compute": "rpi_3a_plus",
+    "workdir": "/var/aeon/"
+  },
+  "persistence": {
+    "crystal_path": "artifacts/memory_crystal.npy",
+    "artifacts_dir": "artifacts/",
+    "backup_every_n_steps": 100,
+    "max_history": 1000
+  },
+  "ros": {
+    "domain_id": 42,
+    "dds_profile": "low_latency",
+    "discovery_timeout_s": 5.0,
+    "default_qos": "reliable"
+  },
+  "pin_layout": {
+    "head": {
+      "pi_cam": "csi-2",
+      "i2s_mic": "i2s",
+      "imu": "i2c-1:0x68"
+    },
+    "torso": {
+      "lora_uart": "uart0",
+      "esp32_uart": "uart1",
+      "led_status": "gpio-18"
+    },
+    "arm_left": { "fsr_pin": "gpio-26", "imu": "i2c-1:0x68" },
+    "arm_right": { "fsr_pin": "gpio-26", "imu": "i2c-1:0x68" },
+    "leg_left":  { "ultrasonic_trigger": "gpio-23", "ultrasonic_echo": "gpio-24", "imu": "i2c-1:0x68" },
+    "leg_right": { "ultrasonic_trigger": "gpio-23", "ultrasonic_echo": "gpio-24", "imu": "i2c-1:0x68" }
+  },
+  "budget_usd": 525
+}

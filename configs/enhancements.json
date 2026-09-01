@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2.0",
+  "scoring_formula": {
+    "novelty_weight": 30.0,
+    "alienness_weight": 25.0,
+    "entropic_potential_weight": 0.05,
+    "elegance_weight": 0.2,
+    "paradox_intensity_weight": 10.0,
+    "ontology_coherence_weight": 15.0
+  },
+  "tier_averages": {
+    "I":   332.4,
+    "II":  329.8,
+    "III": 327.9,
+    "IV":  327.1,
+    "V":   325.9,
+    "VI":  325.2,
+    "VII": 324.9,
+    "VIII": 324.3
+  },
+  "deployment_phases": {
+    "phase_1_foundation": ["I", "II", "III"],
+    "phase_2_expansion": ["IV", "V", "VI"],
+    "phase_3_optimization": ["VII", "VIII"],
+    "phase_4_integration": "all"
+  },
+  "deep_field_patterns": {
+    "coherence_threshold": 0.70,
+    "coherence_composite_floor": 325.0,
+    "golden_ratio_variance_phi": 0.618,
+    "base_psi_phi_lock": 6.18
+  }
+}

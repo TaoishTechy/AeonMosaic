@@ -1,0 +1,33 @@
+{
+  "schema_version": "0.2.0",
+  "targets": {
+    "mesh_uptime_pct": 99.0,
+    "mode_transition_s": 2.0,
+    "psi_sync_accuracy_pct": 5.0,
+    "autonomous_limb_survival_min": 10.0,
+    "wheeled_power_saving_pct": 70.0
+  },
+  "power": {
+    "wheeled_watts": 6.0,
+    "legged_watts": 20.0,
+    "transition_watts": 12.0,
+    "sleep_watts": 0.5,
+    "thermal_limit_c": 75.0,
+    "thermal_throttle_c": 70.0,
+    "low_battery_pct": 15.0,
+    "critical_battery_pct": 5.0
+  },
+  "sleep": {
+    "idle_threshold_s": 30.0,
+    "wake_on_motion": true,
+    "wake_on_dock": true,
+    "wake_on_sos": true,
+    "min_sleep_duration_s": 5.0
+  },
+  "latency": {
+    "wifi_ms_target": 5.0,
+    "bt_ms_target": 15.0,
+    "lora_ms_target": 200.0,
+    "psI_sync_ms_target": 100.0
+  }
+}
