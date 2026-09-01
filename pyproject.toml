@@ -1,0 +1,81 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aeon-mosaic"
+version = "0.2.0"
+description = "AeonMosaic — Unified Master Blueprint for a pleromic modular robot."
+readme = "README.md"
+license = {file = "LICENSE"}
+authors = [{name = "Micheal Landry", email = "micheal.landry@aeonmosaic.dev"}]
+requires-python = ">=3.9"
+keywords = ["robotics", "modular", "psi", "sophia", "gnostic", "distributed", "ros2"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: POSIX :: Linux",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "numpy>=1.24,<3.0",
+    "scipy>=1.10,<2.0",
+    "sympy>=1.12,<2.0",
+    "networkx>=3.0,<4.0",
+    "pyyaml>=6.0,<7.0",
+]
+
+[project.optional-dependencies]
+test = ["pytest>=7.0,<9.0", "pytest-cov>=4.0,<6.0"]
+dev = ["flake8>=6.0", "black>=23.0", "mypy>=1.5"]
+ros = ["rclpy>=4.0"]
+mesh = ["paho-mqtt>=1.6"]
+
+[project.urls]
+Homepage = "https://github.com/TaoishTechy/AeonMosaic"
+Repository = "https://github.com/TaoishTechy/AeonMosaic"
+Issues = "https://github.com/TaoishTechy/AeonMosaic/issues"
+Documentation = "https://github.com/TaoishTechy/AeonMosaic/tree/main/docs"
+
+[project.scripts]
+aeon-simulate = "scripts.simulate_syzygy:main"
+aeon-phase1 = "scripts.phase1_mesh:main"
+aeon-phase2 = "scripts.phase2_mobility:main"
+aeon-phase3 = "scripts.phase3_intelligence:main"
+aeon-phase4 = "scripts.phase4_swarm:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["aeon_embodiment*"]
+
+[tool.setuptools.package-data]
+aeon_embodiment = ["../configs/*.json"]
+
+[tool.pytest.ini_options]
+minversion = "7.0"
+testpaths = ["tests"]
+addopts = "-ra -q --tb=short"
+filterwarnings = [
+    "ignore::DeprecationWarning",
+    "ignore::PendingDeprecationWarning",
+]
+
+[tool.black]
+line-length = 100
+target-version = ["py39", "py310", "py311", "py312"]
+
+[tool.mypy]
+python_version = "3.9"
+ignore_missing_imports = true
+warn_unreachable = true
+warn_redundant_casts = true
+disallow_untyped_defs = false
