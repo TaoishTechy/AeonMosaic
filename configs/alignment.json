@@ -1,0 +1,21 @@
+{
+  "schema_version": "0.2.0",
+  "tiers": [
+    { "tier": 1, "focus": "Quantum Syzygy",            "domain": "Quantum Information Theory", "formulas": [1, 6] },
+    { "tier": 2, "focus": "Distributed PSI Algorithms", "domain": "Distributed AI",            "formulas": [7, 12] },
+    { "tier": 3, "focus": "Mesh Comms Functions",      "domain": "Neuromorphic Computing",     "formulas": [13, 18] },
+    { "tier": 4, "focus": "Mobility Alignment",         "domain": "Holographic Principles",      "formulas": [19, 24] },
+    { "tier": 5, "focus": "Power Management",           "domain": "Retrocausal Mechanics",       "formulas": [25, 30] },
+    { "tier": 6, "focus": "Docking Manager",            "domain": "Quantum Information Theory", "formulas": [31, 36] },
+    { "tier": 7, "focus": "Perception Alignment",       "domain": "Distributed AI",             "formulas": [37, 42] },
+    { "tier": 8, "focus": "Gnostic Core Sciences",      "domain": "Holographic / Retrocausal",   "formulas": [43, 48] }
+  ],
+  "integration_points": {
+    "symbolic_lib": "sympy",
+    "graph_lib": "networkx",
+    "vectorised_lib": "numpy",
+    "trigger": "ros2_action_on_syzygy_threshold"
+  },
+  "default_phi": 0.618,
+  "default_syzygy_threshold": 325.0
+}
